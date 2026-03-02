@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://bbvtrdvg7emwv"]
 
 [ext_resource type="Texture2D" uid="uid://b52hs6jgxnmwa" path="res://Texture/Backgroud/Start-Backgroud.png" id="1_5sao0"]
+[ext_resource type="Script" uid="uid://dhi7858yr44hi" path="res://Scripts/buttons.gd" id="2_5u7g1"]
 
 [node name="START-MEUM" type="Control" unique_id=765539481]
 texture_filter = 1
@@ -13,28 +14,51 @@ grow_vertical = 2
 
 [node name="Backgroud" type="TextureRect" parent="." unique_id=1317256968]
 layout_mode = 0
+offset_top = 3.0
 offset_right = 4500.0
-offset_bottom = 3000.0
+offset_bottom = 3003.0
+scale = Vector2(0.25799525, 0.21689698)
 texture = ExtResource("1_5sao0")
 
-[node name="Camera2D" type="Camera2D" parent="." unique_id=760682007]
-position = Vector2(2246, 1481)
-zoom = Vector2(0.26, 0.22)
+[node name="Buttons" type="Control" parent="." unique_id=1502101386]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("2_5u7g1")
 
-[node name="GameStartButton" type="Button" parent="." unique_id=737556898]
+[node name="OptionsButton" type="Button" parent="Buttons" unique_id=708002338]
 layout_mode = 0
-offset_left = 2752.0
-offset_top = 1557.0
-offset_right = 4388.0
-offset_bottom = 1763.0
-theme_override_font_sizes/font_size = 151
-text = "开始游戏！"
-
-[node name="OptionsButton" type="Button" parent="." unique_id=1715427627]
-layout_mode = 0
-offset_left = 2751.0
-offset_top = 1824.0
-offset_right = 4387.0
-offset_bottom = 2039.0
-theme_override_font_sizes/font_size = 151
+offset_left = 714.0
+offset_top = 395.0
+offset_right = 909.0
+offset_bottom = 459.0
+theme_override_font_sizes/font_size = 32
 text = "设置"
+
+[node name="QuitButton" type="Button" parent="Buttons" unique_id=864491683]
+layout_mode = 0
+offset_left = 933.0
+offset_top = 394.0
+offset_right = 1128.0
+offset_bottom = 458.0
+theme_override_font_sizes/font_size = 32
+text = "退出
+"
+
+[node name="GameStartButton" type="Button" parent="Buttons" unique_id=97976100]
+layout_mode = 0
+offset_left = 713.0
+offset_top = 324.0
+offset_right = 1128.0
+offset_bottom = 387.0
+theme_override_font_sizes/font_size = 36
+text = "开始游戏"
+
+[node name="Options" type="TextureRect" parent="." unique_id=1946761662]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[connection signal="button_down" from="Buttons/OptionsButton" to="Buttons" method="_on_options_button_button_down"]
+[connection signal="button_down" from="Buttons/QuitButton" to="Buttons" method="_on_quit_button_button_down"]
+[connection signal="button_down" from="Buttons/GameStartButton" to="Buttons" method="_on_game_start_button_button_down"]
