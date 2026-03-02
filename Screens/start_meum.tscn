@@ -1,0 +1,31 @@
+[gd_scene format=3 uid="uid://bbvtrdvg7emwv"]
+
+[ext_resource type="Texture2D" uid="uid://b52hs6jgxnmwa" path="res://Texture/Backgroud/Start-Backgroud.png" id="1_5sao0"]
+
+[node name="START-MEUM" type="Control" unique_id=765539481]
+texture_filter = 1
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Backgroud" type="TextureRect" parent="." unique_id=1317256968]
+layout_mode = 0
+offset_right = 4500.0
+offset_bottom = 3000.0
+texture = ExtResource("1_5sao0")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=760682007]
+position = Vector2(2246, 1481)
+zoom = Vector2(0.26, 0.22)
+
+[node name="Button" type="Button" parent="." unique_id=737556898]
+layout_mode = 0
+offset_left = 2752.0
+offset_top = 1557.0
+offset_right = 4388.0
+offset_bottom = 1763.0
+theme_override_font_sizes/font_size = 151
+text = "开始游戏！"
