@@ -21,7 +21,7 @@ texture = ExtResource("1_5sao0")
 position = Vector2(2246, 1481)
 zoom = Vector2(0.26, 0.22)
 
-[node name="Button" type="Button" parent="." unique_id=737556898]
+[node name="GameStartButton" type="Button" parent="." unique_id=737556898]
 layout_mode = 0
 offset_left = 2752.0
 offset_top = 1557.0
@@ -29,3 +29,12 @@ offset_right = 4388.0
 offset_bottom = 1763.0
 theme_override_font_sizes/font_size = 151
 text = "开始游戏！"
+
+[node name="OptionsButton" type="Button" parent="." unique_id=1715427627]
+layout_mode = 0
+offset_left = 2751.0
+offset_top = 1824.0
+offset_right = 4387.0
+offset_bottom = 2039.0
+theme_override_font_sizes/font_size = 151
+text = "设置"
