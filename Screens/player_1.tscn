@@ -20,9 +20,10 @@ animations = [{
 }]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_0bbny"]
-radius = 41.01219
+radius = 42.01911
 
 [node name="Player1" type="CharacterBody2D" unique_id=715161160]
+scale = Vector2(0.45482162, 0.4418701)
 script = ExtResource("1_4q78p")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=2049146246]
@@ -30,8 +31,10 @@ sprite_frames = SubResource("SpriteFrames_hycc8")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=815521228]
 shape = SubResource("CircleShape2D_0bbny")
+debug_color = Color(0, 0.6, 0.69803923, 0)
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1723672798]
+zoom = Vector2(1.885, 1.885)
 process_callback = 0
 position_smoothing_enabled = true
 rotation_smoothing_enabled = true
